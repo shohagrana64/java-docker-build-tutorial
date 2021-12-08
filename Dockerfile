@@ -2,7 +2,7 @@
 
 # Stage 1 (to create a "build" image, ~140MB)
 # FROM openjdk:8-jdk-alpine3.7 AS builder
-FROM maven:3.8.4-jdk-8
+FROM maven:3.8.2-jdk-8-openj9
 RUN java -version
 
 COPY . /usr/src/myapp/
