@@ -6,6 +6,8 @@ RUN java -version
 
 COPY . /usr/src/myapp/
 WORKDIR /usr/src/myapp/
+RUN rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/*
 RUN apk update
 RUN apk --no-cache add maven && mvn --version
 RUN mvn package
